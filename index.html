@@ -67,7 +67,37 @@ button.cta:hover{filter:brightness(.98); transform: translateY(-1px)}
     <img src="Logo-1.JPG" alt="One‑O‑One Logo">
     <h1>Înscriere – Program Prelungit</h1>
     <p>🕛 12:00–17:30 • Din 1 septembrie • 🍎 Gustare inclusă</p>
-    <div class="badges">
+    <div class="badges"> <!-- FORMULAR ÎNSCRIERE -->
+<section class="form-section">
+  <h2>Formular de Înscriere</h2>
+  <form action="https://formsubmit.co/EMAIL_TAU" method="POST">
+    
+    <label for="nume">Nume copil:</label>
+    <input type="text" id="nume" name="nume" required>
+
+    <label for="parinte">Nume părinte:</label>
+    <input type="text" id="parinte" name="parinte" required>
+
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" name="telefon" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="mesaj">Observații:</label>
+    <textarea id="mesaj" name="mesaj" rows="4"></textarea>
+
+    <button type="submit">Trimite Înscrierea</button>
+
+    <!-- Setări ascunse -->
+    <input type="hidden" name="_subject" value="Înscriere nouă la Program Prelungit!">
+    <input type="hidden" name="_next" value="https://USERNAME.github.io/inscrieri/multumim.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" name="_honey" style="display:none">
+
+  </form>
+</section>
+
       <span class="badge badge--leaf">Teme</span>
       <span class="badge badge--warm">Șah</span>
       <span class="badge badge--accent">Gimnastică</span>
