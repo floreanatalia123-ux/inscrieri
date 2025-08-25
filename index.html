@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mulțumim • Thank you – One‑O‑One</title>
+  <title>Înscriere – One‑O‑One | Program Prelungit</title>
   <style>
 /* One‑O‑One brand tokens */
 :root{
@@ -60,38 +60,66 @@ button.cta:hover{filter:brightness(.98); transform: translateY(-1px)}
 .badge--accent{border-color: var(--brand-accent)}
 
 @media (max-width:760px){ .grid{grid-template-columns:1fr} }
-
-  .thank{padding:24px; text-align:center}
-  .pill{display:inline-block; padding:6px 10px; border-radius:999px; background:#fff; border:2px solid var(--brand-primary); font-weight:800;}
-  .btn{display:inline-block; margin-top:12px; padding:12px 18px; border-radius:12px; text-decoration:none; background:linear-gradient(90deg,var(--brand-primary),var(--brand-accent)); color:#fff; font-weight:900;}
-  </style>
+</style>
 </head>
 <body>
-  <main class="container">
-    <section class="card thank">
-      <img src="Logo-1.JPG" alt="One‑O‑One Logo" style="max-height:90px; margin-bottom:6px">
-      <h1 style="color:#27ae60">✨ Mulțumim pentru înscriere! ✨</h1>
-      <p class="pill">Răspunsul a fost trimis cu succes.</p>
+  <header class="hero">
+    <img src="Logo-1.JPG" alt="One‑O‑One Logo">
+    <h1>Înscriere – Program Prelungit</h1>
+    <p>🕛 12:00–17:30 • Din 1 septembrie • 🍎 Gustare inclusă</p>
+    <div class="badges">
+      <span class="badge badge--leaf">Teme</span>
+      <span class="badge badge--warm">Șah</span>
+      <span class="badge badge--accent">Gimnastică</span>
+      <span class="badge">Arte & Craft</span>
+    </div>
+  </header>
 
-      <hr style="height:1px; border:0; background:linear-gradient(90deg,var(--brand-primary),var(--brand-accent)); margin:18px 0">
+  <main class="container">
+    <form class="card" action="https://formsubmit.co/centruldedezvoltare101@yahoo.com" method="POST">
+      <input type="hidden" name="_next" value="thankyou-bilingual.html">
+      <input type="hidden" name="_subject" value="Înscriere Program Prelungit – One‑O‑One">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
 
       <div class="grid">
-        <div class="card" style="box-shadow:none">
-          <h2 style="margin:.2rem 0 .6rem">RO • Informații pentru părinți</h2>
-          <p>• Program: <strong>12:00 – 17:30</strong> • Din <strong>1 septembrie</strong></p>
-          <p>• Activități: teme, șah, gimnastică, craft & arte • <strong>🍎 Gustare inclusă</strong></p>
-          <p>• Întrebări? WhatsApp: <strong>078807302</strong></p>
-          <a class="btn" href="index.html">⟵ Înapoi la formular</a>
+        <div>
+          <label>Nume copil <span class="req">*</span></label>
+          <input type="text" name="Nume copil" required>
         </div>
-        <div class="card" style="box-shadow:none">
-          <h2 style="margin:.2rem 0 .6rem">EN • Information for parents</h2>
-          <p>• Schedule: <strong>12:00 – 17:30</strong> • From <strong>September 1st</strong></p>
-          <p>• Activities: homework, chess, gymnastics, crafts & arts • <strong>🍎 Snack included</strong></p>
-          <p>• Questions? WhatsApp: <strong>+373 78 807 302</strong></p>
-          <a class="btn" href="index.html">⟵ Back to the form</a>
+        <div>
+          <label>Nume părinte <span class="req">*</span></label>
+          <input type="text" name="Părinte" required>
+        </div>
+        <div>
+          <label>Telefon (WhatsApp) <span class="req">*</span></label>
+          <input type="tel" name="Telefon" required>
+        </div>
+        <div>
+          <label>Email <span class="req">*</span></label>
+          <input type="email" name="Email" required>
+        </div>
+        <div>
+          <label>Data începerii <span class="req">*</span></label>
+          <input type="date" name="Data începerii" required>
+        </div>
+        <div>
+          <label>Zile de participare <span class="req">*</span></label>
+          <select name="Zile" required>
+            <option value="Luni–Vineri">Luni–Vineri</option>
+            <option value="3 zile / săptămână">3 zile / săptămână</option>
+            <option value="Altă variantă">Altă variantă</option>
+          </select>
         </div>
       </div>
-    </section>
+
+      <label style="margin-top:8px">
+        <input type="checkbox" name="Acord prelucrare date" required> Sunt de acord cu prelucrarea datelor pentru înscriere și comunicare
+      </label>
+
+      <button class="cta" type="submit">Trimite înscrierea</button>
+      <div class="footer">☎️ 078807302 • One‑O‑One • Bubuieci</div>
+    </form>
   </main>
 </body>
 </html>
