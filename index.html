@@ -1,125 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Înscriere – One‑O‑One | Program Prelungit</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formular de contact</title>
   <style>
-/* One‑O‑One brand tokens */
-:root{
-  --brand-primary:#00c3ff;   /* turquoise */
-  --brand-accent:#ff7eb3;    /* pink */
-  --brand-warm:#ffe66d;      /* warm yellow */
-  --brand-leaf:#00d084;      /* fresh green */
-  --ink:#111;
-  --muted:#555;
-  --panel:#ffffff;
-  --bg:#f7f8fb;
-  --radius:14px;
-  --shadow:0 10px 24px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.05);
-}
-
-*{box-sizing:border-box}
-body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg);}
-.container{max-width:820px; margin:28px auto; padding:0 16px;}
-header.hero{
-  background: linear-gradient(135deg, var(--brand-primary), var(--brand-warm), var(--brand-accent));
-  color:#fff; text-align:center; padding:28px 18px;
-  box-shadow: var(--shadow);
-}
-.hero img{max-height:86px; display:block; margin:0 auto 10px;}
-.hero h1{margin:0 0 6px; font-size:1.9rem; text-shadow: 0 1px 2px rgba(0,0,0,.12);}
-.hero p{margin:0; font-weight:600}
-
-.card{
-  background:var(--panel); border-radius:var(--radius); padding:18px;
-  box-shadow: var(--shadow); border:2px solid rgba(0,0,0,.03);
-}
-
-label{display:block; font-weight:700; margin:10px 0 6px}
-input,select,textarea{
-  width:100%; padding:12px; border:1px solid #d0d5dd; border-radius:12px; background:#fff; font-size:1rem;
-}
-.grid{display:grid; gap:14px; grid-template-columns:1fr 1fr}
-.grid-1{grid-template-columns:1fr}
-.req{color:#d64545}
-button.cta{
-  width:100%; padding:12px 16px; border:0; border-radius:12px; cursor:pointer;
-  color:#fff; font-weight:900; font-size:1.05rem;
-  background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent));
-  box-shadow: 0 6px 14px rgba(0,195,255,.25);
-}
-button.cta:hover{filter:brightness(.98); transform: translateY(-1px)}
-.footer{ text-align:center; color:var(--muted); margin-top:10px}
-
-.badges{display:flex; gap:8px; justify-content:center; margin-top:8px}
-.badge{background:#fff; color:#333; border-radius:999px; padding:6px 10px; font-weight:700; font-size:.85rem; box-shadow: var(--shadow); border:2px solid #fff}
-.badge--leaf{border-color: var(--brand-leaf)}
-.badge--warm{border-color: var(--brand-warm)}
-.badge--accent{border-color: var(--brand-accent)}
-
-@media (max-width:760px){ .grid{grid-template-columns:1fr} }
-</style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f8fa;
+      padding: 40px;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #0077cc;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <img src="Logo-1.JPG" alt="One‑O‑One Logo">
-    <h1>Înscriere – Program Prelungit</h1>
-    <p>🕛 12:00–17:30 • Din 1 septembrie • 🍎 Gustare inclusă</p>
-    <div class="badges">
-      <span class="badge badge--leaf">Teme</span>
-      <span class="badge badge--warm">Șah</span>
-      <span class="badge badge--accent">Gimnastică</span>
-      <span class="badge">Arte & Craft</span>
-    </div>
-  </header>
+  <div class="container">
+    <h2>Formular de contact</h2>
+    <form action="https://formsubmit.co/EMAIL_TAU" method="POST">
+      
+      <!-- Nume -->
+      <label for="nume">Nume:</label>
+      <input type="text" id="nume" name="nume" required>
 
-  <main class="container">
-    <form class="card" action="https://formsubmit.co/centruldedezvoltare101@yahoo.com" method="POST">
-      <input type="hidden" name="_next" value="thankyou-bilingual.html">
-      <input type="hidden" name="_subject" value="Înscriere Program Prelungit – One‑O‑One">
-      <input type="hidden" name="_template" value="table">
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Mesaj -->
+      <label for="mesaj">Mesaj:</label>
+      <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+
+      <!-- Buton trimite -->
+      <button type="submit">Trimite</button>
+
+      <!-- Setări ascunse FormSubmit -->
+      <input type="hidden" name="_subject" value="Mesaj nou de pe site-ul tău!">
+      <input type="hidden" name="_next" value="https://siteultau.com/multumim.html">
       <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
 
-      <div class="grid">
-        <div>
-          <label>Nume copil <span class="req">*</span></label>
-          <input type="text" name="Nume copil" required>
-        </div>
-        <div>
-          <label>Nume părinte <span class="req">*</span></label>
-          <input type="text" name="Părinte" required>
-        </div>
-        <div>
-          <label>Telefon (WhatsApp) <span class="req">*</span></label>
-          <input type="tel" name="Telefon" required>
-        </div>
-        <div>
-          <label>Email <span class="req">*</span></label>
-          <input type="email" name="Email" required>
-        </div>
-        <div>
-          <label>Data începerii <span class="req">*</span></label>
-          <input type="date" name="Data începerii" required>
-        </div>
-        <div>
-          <label>Zile de participare <span class="req">*</span></label>
-          <select name="Zile" required>
-            <option value="Luni–Vineri">Luni–Vineri</option>
-            <option value="3 zile / săptămână">3 zile / săptămână</option>
-            <option value="Altă variantă">Altă variantă</option>
-          </select>
-        </div>
-      </div>
-
-      <label style="margin-top:8px">
-        <input type="checkbox" name="Acord prelucrare date" required> Sunt de acord cu prelucrarea datelor pentru înscriere și comunicare
-      </label>
-
-      <button class="cta" type="submit">Trimite înscrierea</button>
-      <div class="footer">☎️ 078807302 • One‑O‑One • Bubuieci</div>
     </form>
-  </main>
+  </div>
 </body>
 </html>
